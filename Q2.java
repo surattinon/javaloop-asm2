@@ -23,21 +23,20 @@ public class Q2 {
       inputpass = input.nextLine(); // Read user input password and store in inputpass
       if (inputpass.equals(password)) { // Check if the input password is correct
         System.out.println("PASSWORD ACCEPTED, YOU NOW HAVE ACCESS TO YOUR EMAIL.");
-        accBlock = false; // Set isPass to true for terminatet the loop
-        break;
+        accBlock = false; // set accBlock to false
+        break; // break the loop
 
       } else if (attemps >= 3) { // Check if the attemps is greater than or equal to 3 to block the account
-        accBlock = true; // Set isPass to true for terminatet the loop
-        break;
+        accBlock = true; // Set accBlock to true to block the account
 
       } else { // If the input not correct, display the message and increment the attemps
         attemps++;
         System.out.println("INCORRECT PASSWORD, PLEASE TRY AGAIN ATTEMP " + attemps);
       }
 
-    } while (!accBlock); // Loop until isPass is true
+    } while (!accBlock); // Loop until accBlock is true
 
-    if (accBlock) { // Check if the account is blocked}
+    if (accBlock) { // Check if accBlock is true to display the message
       System.out.println("YOUR ACCOUNT HAS BEEN BLOCKED, PLEASE CONTACT THE ADMINISTRATOR.");
     }
 
